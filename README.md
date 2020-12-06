@@ -37,16 +37,18 @@ First expected release the friday **18th december 2020**
     ``` bash
     apt install python3-pip
     apt install sqlite3
+    pip install PTable
+    pip install Flask
     ```
 
 ## :clipboard: Tasks
 
 1. Database
-    - [ ] Create the schema
-    - [ ] Connect the back to the database
+    - [x] Create the schema
+    - [x] Connect the back to the database
 
 1. Data
-    - [ ] Generate random information
+    - [x] Generate random information
     - [ ] Scrap data on internet
         - [ ] Wikipedia
         - [ ] Twitter
@@ -55,7 +57,7 @@ First expected release the friday **18th december 2020**
         - [ ] Facebook
 
 1. Design the API and expose endpoints
-    - [ ] Use Flask (Basic)
+    - [x] Use Flask (Basic)
     - [ ] Try GraphQL (Generic)
     - [ ] Try Postman to design the API (Advanced)
     - [ ] Allow filters
