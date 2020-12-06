@@ -1,5 +1,4 @@
 import sqlite3
-
 from prettytable import from_db_cursor
 
 
@@ -17,7 +16,7 @@ def create_events_table(con):
         CREATE TABLE IF NOT EXISTS events (
             id INTEGER PRIMARY KEY AUTOINCREMENT, 
             date date, location TEXT, author TEXT, details TEXT, labels TEXT,
-            Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP);
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP);
     """
     with con:
         con.execute(sql_create_events_table)
@@ -61,11 +60,12 @@ def test_database_creation():
     create_events_table(con)
 
     events = [
-        ("morgan madelaine", "01/03/1990", "martinique", "I was born in Schoelcher", "date of birth"),
-        ("rudolph madelaine", "28/07/1992", "martinique", "I was born in Schoelcher", "date of birth"),
-        ("ruben madelaine", "20/03/1994", "martinique", "I was born in Schoelcher", "date of birth"),
-        ("manfred madelaine", "01/08/1995", "martinique", "I was born in Schoelcher", "date of birth")
+        ("morgan madelaine", "01-03-1990", "martinique", "I was born in Schoelcher", "date of birth"),
+        ("rudolph madelaine", "28-07-1992", "martinique", "I was born in Schoelcher", "date of birth"),
+        ("ruben madelaine", "20-03-1994", "martinique", "I was born in Schoelcher", "date of birth"),
+        ("manfred madelaine", "01-08-1995", "martinique", "I was born in Schoelcher", "date of birth")
     ]
+
     insert_events_rows(con, events)
     events = get_all_events(con)
     print_table(events)
