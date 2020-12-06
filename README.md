@@ -38,6 +38,7 @@ First expected release the friday **18th december 2020**
     apt install python3-pip
     apt install sqlite3
     pip install PTable
+    pip install Flask
     ```
 
 ## :clipboard: Tasks
@@ -56,7 +57,7 @@ First expected release the friday **18th december 2020**
         - [ ] Facebook
 
 1. Design the API and expose endpoints
-    - [ ] Use Flask (Basic)
+    - [x] Use Flask (Basic)
     - [ ] Try GraphQL (Generic)
     - [ ] Try Postman to design the API (Advanced)
     - [ ] Allow filters
