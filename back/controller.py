@@ -5,14 +5,14 @@ import events as ev
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return 'Index Page'
+    return "Index Page"
 
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html'), 404
+    return render_template("page_not_found.html"), 404
 
 
 @app.route("/events")
@@ -23,7 +23,7 @@ def events_api(date=None):
     if date:
         events = [event for event in events if event.date == date]
 
-    author = request.args.get('author')
+    author = request.args.get("author")
     if author:
         events = [event for event in events if author in event.author]
 
@@ -32,6 +32,6 @@ def events_api(date=None):
 
 if __name__ == "__main__":
     with app.test_request_context():
-        print(url_for('index'))
-        print(url_for('events_api'))
-        print(url_for('events_api', date='01-03-1990'))
+        print(url_for("index"))
+        print(url_for("events_api"))
+        print(url_for("events_api", date="01-03-1990"))

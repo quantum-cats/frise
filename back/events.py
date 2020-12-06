@@ -34,12 +34,14 @@ def map_events(events):
 
 
 def to_domain(event):
-    return Event(event['date'],
-                 event['location'],
-                 event['details'],
-                 event['author'],
-                 event['labels'],
-                 event['timestamp'])
+    return Event(
+        event["date"],
+        event["location"],
+        event["details"],
+        event["author"],
+        event["labels"],
+        event["timestamp"],
+    )
 
 
 if __name__ == "__main__":
