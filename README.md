@@ -42,7 +42,7 @@ First expected release the friday **18th december 2020**
 ## :clipboard: Tasks
 
 1. Database
-    - [ ] Create the schema
+    - [x] Create the schema
     - [ ] Connect the back to the database
 
 1. Data
