@@ -37,16 +37,17 @@ First expected release the friday **18th december 2020**
     ``` bash
     apt install python3-pip
     apt install sqlite3
+    pip install PTable
     ```
 
 ## :clipboard: Tasks
 
 1. Database
     - [x] Create the schema
-    - [ ] Connect the back to the database
+    - [x] Connect the back to the database
 
 1. Data
-    - [ ] Generate random information
+    - [x] Generate random information
     - [ ] Scrap data on internet
         - [ ] Wikipedia
         - [ ] Twitter
