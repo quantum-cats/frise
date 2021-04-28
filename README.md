@@ -39,6 +39,14 @@ First expected release the friday **18th december 2020**
     apt install sqlite3
     pip install PTable
     pip install Flask
+    pip install extraction graphene flask-graphql requests
+    ```
+
+1. Run bellow comands to start the Flask server:
+
+    ``` bash
+    export FLASK_APP=back/controller.py
+    flask run
     ```
 
 ## :clipboard: Tasks

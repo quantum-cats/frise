@@ -22,11 +22,15 @@ class Event:
         return json.dumps(self.__dict__)
 
 
-def get_all_events():
+def get_all_events(date=None):
     con = db.get_connection(DB_NAME)
     events = db.get_all_events(con)
+    events = map_events(events)
     con.close()
-    return map_events(events)
+
+    if date:
+        events = [event for event in events if event.date == date]
+    return events
 
 
 def map_events(events):
